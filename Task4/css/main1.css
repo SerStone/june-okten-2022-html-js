@@ -1,0 +1,162 @@
+
+.wrap{
+    border: 5px white;
+    width: 100%;
+    height: 815px;
+}
+.a {
+    width: 100%;
+    height: 33%;
+    background: #b1d2fc;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+
+
+
+}
+.grand{
+    width: 75%;
+    height: 100%;
+    flex-direction: column;
+}
+.father{
+    width: 100%;
+    height: 66%;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+}
+.b{
+    display: flex;
+    width: 99%;
+    height: 50%;
+    background: #877ff6;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+
+
+
+}
+.container_cde{
+    width: 100%;
+    height: 50%;
+    display: flex;
+
+}
+.f{
+    display: flex;
+    width: 25%;
+    height: 100%;
+    background: #2e59b1;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    margin-left: 5px;
+
+
+
+}
+h1{
+    font-family: Verdana sans-serif;
+    color: white;
+}
+.box{
+    width: 415px;
+    height: 96%;
+    background-color: aquamarine;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+
+}
+.c{
+
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+.d{
+
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+.e{
+
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+
+}
+@media screen and (max-width: 1300px){
+    .father{
+        flex-direction: column;
+        height: 86%
+    }
+    .grand{
+        width: 100%;
+    }
+    .a{
+        height: 14%;
+
+    }
+    .b{
+        width: 100%;
+        display: flex;
+        height: 60%;
+
+    }
+    .c{
+        width: 100%;
+        height: 17%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .box{
+
+        width: 100px;
+        height: 90px;
+        margin: 100px;
+        display: flex;
+    }
+
+    .container_cde{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
+    .f{
+        width: 100%;
+        height: 20%;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 877px){
+    .box{
+        margin: 10%;
+    }
+    .f{
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 576px){
+    .box{
+        margin: 10%;
+        height: 20%;
+    }
+}

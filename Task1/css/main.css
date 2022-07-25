@@ -1,0 +1,32 @@
+h1{
+    background-color: #98f5f5;
+    color: white;
+    font-family: Verdana, serif;
+    text-align: center;
+
+}
+.rounded{
+    border-radius: 50%;
+
+}
+p{
+    font-family: Arial, sans-serif;
+    background-color: #98f5f5;
+    color: white;
+    text-align: center;
+}
+h2{
+    background-color: #98f5f5;
+    color: white;
+    font-family: Verdana, serif;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+li{
+    background-color: #98f5f5;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: larger;
+}

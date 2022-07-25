@@ -1,0 +1,141 @@
+.father{
+    width: 80%;
+    height: 900px;
+    border: solid 2px black;
+    margin: 0 auto;
+display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.first{
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    gap: 10px;
+}
+.Logo{
+    height: 100%;
+    width: 20%;
+    background-color: #877ff6;
+    gap: 10px;
+}
+.Header{
+    height: 100%;
+    width: 79%;
+    background-color: #98f5f5;
+}
+
+.main{
+
+    display: flex;
+    gap: 10px;
+}
+.container_389{
+display: flex;
+    flex-direction: column;
+    width: 20%;
+    gap: 10px;
+
+
+}
+.Nav{
+    height: 300px;
+    background-color: #86de4b;
+}
+.card{
+    height: 145px;
+    background-color: #c7b5b5;
+}
+.content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.container_45{
+    display: flex;
+    gap: 10px;
+}
+.container_67{
+    display: flex;
+    gap: 10px;
+}
+.Bath{
+    width: 80%;
+    height: 200px;
+    background-color: #2e59b1;
+}
+.Ad{
+    width: 20%;
+    height: 200px;
+    background-color: black;
+
+}
+.Types{
+    width: 80%;
+    height: 400px;
+    background-color: gold;
+}
+.Related{
+    width: 20%;
+    height: 400px;
+    background-color: coral;
+}
+
+.Footer{
+
+    background-color: aqua;
+width: 100%;
+    height: 198px;
+
+}
+.newcon389{
+    display: none;
+}
+.new_box{
+    display: none;
+}
+@media screen and (max-width: 587px)  {
+.container_389{
+    display: none;
+}
+    .newcon389{
+        display: block;
+        background-color: chocolate;
+        height: 50px;
+    }
+    .new_box{
+        display: flex;
+        gap: 10px;
+    }
+    .card{
+        width: 50%;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .content{
+        width: 100%;
+    }
+    .container_67{
+        flex-direction: column;
+    }
+    .Bath{
+       height:  100px;
+    }
+    .Ad{
+        height:  100px;
+    }
+    .Types{
+        width: 100%;
+        height: 250px;
+    }
+    .Related{
+        width: 100%;
+        height: 200px;
+    }
+}

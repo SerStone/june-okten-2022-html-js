@@ -1,0 +1,74 @@
+.genny{
+    border: 5px white;
+    width: 100%;
+    height: 815px;
+}
+.A {
+    margin-top: 5px;
+    width: 100%;
+    height: 200px;
+    background: #b1d2fc;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+margin-bottom: 10px;
+
+
+}
+.footer{
+
+    width: 100%;
+    height: 600px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+}
+.B{
+    display: flex;
+    width: 75%;
+    height: 600px;
+    background: #877ff6;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+.C{
+    display: flex;
+    width: 25%;
+    height: 600px;
+    background: #2e59b1;
+    justify-content: center;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 5px;
+
+
+}
+h1{
+    font-family: Verdana sans-serif;
+    color: white;
+}
+@media screen and (max-width: 1300px){
+    .footer{
+        flex-direction: column;
+        height: 86%
+    }
+    .A{
+        height: 14%;
+
+    }
+    .B{
+        width: 100%;
+        height: 83%;
+
+    }
+    .C{
+        width: 100%;
+        height: 17%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+}
