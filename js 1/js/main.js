@@ -91,10 +91,10 @@ let c = true;
 console.log(typeof c);
 
 
-let year = 2002+'';
+
 let inputData = prompt('Input your name',firstName);
 console.log(inputData+"");
 let inputData1 = prompt('Input your surname',lastName);
 console.log(inputData1+"");
-let inputData2 = prompt('Input your dateofbirth',year);
+let inputData2 = parseInt(prompt('Input your dateofbirth'));
 console.log(inputData2+"");
