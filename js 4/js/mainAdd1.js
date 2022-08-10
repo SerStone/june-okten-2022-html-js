@@ -247,6 +247,8 @@ let library = [
 // console.log(maxgenre);
 
 // - знайти книжку/ки з найдовшою назвою ??????як це можна було краще реалізувати?
+
+
 // let maxname = library[0];
 // for (const libraryElement of library) {
 //     if (libraryElement.name < maxname.name){
@@ -254,6 +256,17 @@ let library = [
 //     }
 // }
 // console.log(maxname);
+
+
+
+
+
+
+
+
+
+
+
 
 // - знайти книжку/ки які писали 2 автори
 // let maxauthors= library[0];
