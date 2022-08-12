@@ -4,8 +4,8 @@
 //     let strC= 'javascript is cool';
 // console.log(strA.length,strB.length,strC.length);
 
-// let str = ['hello world', 'lorem ipsum', 'javascript is cool'];
-// str.forEach(value => console.log(value.length));
+let str = ['hello world', 'lorem ipsum', 'javascript is cool'];
+str.forEach(value => console.log(value.length));
 
 
 // - Перевести до великого регістру наступні стрінгові значення
