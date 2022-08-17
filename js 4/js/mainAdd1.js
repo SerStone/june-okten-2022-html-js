@@ -225,15 +225,15 @@
 let library = [
     {name: ['Harry Potter','and philosopher stone'],pagecount: 450,authors:['Joan Roaling'],genre: ['fantasy','fantastic']},
     {name: ['Hobbit'],pagecount: 550,authors:['John Tolkin'],genre: ['fantastic']},
-    {name: ['Sherlok Holmes'],pagecount: 350,authors:['Arthur Conan Doyle'],genre: ['detective']},
+    {name: ['Sherlok Holmes'],pagecount: 750,authors:['Arthur Conan Doyle'],genre: ['detective']},
     {name: ['Tower'],pagecount: 250,authors:['Joan Geek','Marley Kot'],genre: ['drama']},
 ];
 // -знайти найбільшу книжку.
-
-// let max = library[0];
+//
+// let max = library[0].pagecount;
 // for (const libraryElement of library) {
-//     if (libraryElement.pagecount>max.pagecount){
-//         max = libraryElement.name;
+//     if (libraryElement.pagecount>max){
+//         max = libraryElement.pagecount;
 //     }
 // }
 // console.log(max);
