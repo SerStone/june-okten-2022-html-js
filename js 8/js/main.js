@@ -228,5 +228,5 @@
 // function callback(smb){
 //     return smb.sizeOfleg = prince.shoe
 // }
-// //
+// /////
 // console.log(mas.find(value =>callback(value)));
