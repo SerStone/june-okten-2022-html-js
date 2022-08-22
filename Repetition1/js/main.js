@@ -974,3 +974,323 @@
 
 
 
+
+// - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+// створити пустий масив, наповнити його 10 об'єктами new User(....)
+
+// function User(id, name, surname , email, phone){
+//     this.id = id;
+//     this.name = name;
+//     this.surname = surname;
+//     this.email = email;
+//     this.phone = phone;
+// }
+//
+// let array = [];
+//
+// let user1 = new User(39,'vasya','vasya','gtgtgt@vfvf.com',3809978656)
+// let user2 = new User(54,'vasya','vasya','gtgtgt@vfvf.com',3809924456)
+// let user3 = new User(34,'vasya','vasya','gtgtgt@vfvf.com',3809945656)
+// let user4 = new User(24,'vasya','vasya','gtgtgt@vfvf.com',3809978456)
+// let user5 = new User(14,'vasya','vasya','gtgtgt@vfvf.com',3809934556)
+//
+//
+// array.push(user1,user2,user3,user4,user5);
+// console.log(array);
+
+//
+// - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+
+// let filter = array.filter(value => value.id % 2 === 0);
+// console.log(filter);
+
+// - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+
+// let sorter = array.sort((a, b) => a.id - b.id);
+// console.log(sorter);
+
+// - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+// створити пустий масив, наповнити його 10 об'єктами Client
+
+// class Client {
+//     constructor(id, name, surname , email, phone, order) {
+//     this.id = id;
+//     this.name = name;
+//     this.surname = surname;
+//     this.email = email;
+//     this.phone = phone;
+//     this.order = order;
+//     }
+//
+// }
+
+// let array = [];
+
+// let user1 = new Client(39,'vasya','vasya','gtgtgt@vfvf.com',3809978656,[12,3,4,5])
+// let user2 = new Client(54,'vasya','vasya','gtgtgt@vfvf.com',3809924456,[324,4,5,6])
+// let user3 = new Client(34,'vasya','vasya','gtgtgt@vfvf.com',3809945656,[3])
+// let user4 = new Client(24,'vasya','vasya','gtgtgt@vfvf.com',3809978456,[2,3])
+// let user5 = new Client(14,'vasya','vasya','gtgtgt@vfvf.com',3809934556,[33])
+
+// array.push(user1,user2,user3,user4,user5);
+// console.log(array);
+
+// - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+// let sorterOfOrders = array.sort((a, b) => a.order.length - b.order.length);
+// console.log(sorterOfOrders);
+
+// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+
+// function Car (model,producer,date,maxSpeed,engine) {
+//     this.model = model;
+//     this.producer = producer;
+//     this.date = date;
+//     this.maxSpeed = maxSpeed;
+//     this.engine = engine;
+//     this.drive = function () {
+//         return `їдемо зі швидкістю ${maxSpeed} на годину`
+//     }
+//     this.info = function () {
+//         for (const carKey in this) {
+//             if (typeof this[carKey]!=="function"){
+//                 console.log(`${carKey} --- ${this[carKey]}`);
+//             }
+//         }
+//     }
+//     this.increaseMaxSpeed = function (newSpeed) {
+//         this.maxSpeed += newSpeed;
+//         return this.maxSpeed
+//     }
+//     this.changeYear = function (newValue) {
+//         this.date = newValue;
+//         return this.date;
+//     }
+//     this.addDriver = function (driver)  {
+//         this.driver = driver;
+//         return this.driver;
+//     }
+// }
+//
+// let car1 = new Car('Mercedes','Germany',2021,230,3.5);
+// let driver1 = {name: 'Petro', age: 25, experience: 3};
+// //
+// console.log(car1.drive());
+// car1.info();
+// car1.increaseMaxSpeed(20);
+// car1.changeYear(2022);
+// car1.info();
+// console.log(car1.addDriver(driver1));
+// console.log(car1);
+
+// -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+// -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+//
+//
+// - (Те саме, тільки через клас)
+// Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+// -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+// -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// -- changeYear (newValue) - змінює рік випуску на значення newValue
+// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+//
+
+// class Car{
+//
+//     constructor(model,producer,date,maxSpeed,engine) {
+//     this.model = model;
+//     this.producer = producer;
+//     this.date = date;
+//     this.maxSpeed = maxSpeed;
+//     this.engine = engine;
+// }
+//     drive() {
+//         return `їдемо зі швидкістю ${this.maxSpeed} на годину`
+//     }
+//     info() {
+//         for (const carKey in this) {
+//             if (typeof this[carKey]!=="function"){
+//                 console.log(`${carKey} --- ${this[carKey]}`);
+//             }
+//         }
+//     }
+//     increaseMaxSpeed(newSpeed) {
+//         this.maxSpeed += newSpeed;
+//         return this.maxSpeed
+//     }
+//     changeYear(newValue) {
+//         this.date = newValue;
+//         return this.date;
+//     }
+//     addDriver(driver)  {
+//         this.driver = driver;
+//         return this.driver;
+//     }
+// }
+
+// let car1 = new Car('Mercedes','Germany',2021,230,3.5);
+// let driver1 = {name: 'Petro', age: 25, experience: 3};
+//
+// console.log(car1.drive());
+// car1.info();
+// car1.increaseMaxSpeed(20);
+// car1.changeYear(2022);
+// car1.info();
+// console.log(car1.addDriver(driver1));
+// console.log(car1);
+//
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+
+// class Cinderella {
+//     constructor(name, age, footSize) {
+//         this.name = name;
+//         this.age = age;
+//         this.footSize = footSize;
+//     }
+// }
+//
+// let cinderellas = [];
+//
+// let cinderella1 = new Cinderella('Anna',34,36);
+// let cinderella2 = new Cinderella('Anna',24,32);
+// let cinderella3 = new Cinderella('Anna',34,43);
+// let cinderella4 = new Cinderella('Anna',31,37);
+// let cinderella5 = new Cinderella('Anna',32,38);
+// let cinderella6 = new Cinderella('Anna',33,34);
+// let cinderella7 = new Cinderella('Anna',34,38);
+// let cinderella8 = new Cinderella('Anna',34,42);
+// let cinderella9 = new Cinderella('Anna',34,40);
+// let cinderella10 = new Cinderella('Anna',34,39);
+//
+// cinderellas.push(cinderella1,cinderella2,cinderella3,cinderella4,cinderella5,cinderella6,cinderella7,cinderella8,cinderella9,cinderella10);
+//
+// class Prince extends Cinderella{
+//
+//     constructor(name, age, shoeSize) {
+//         super(name,age)
+//         this.shoeSize = shoeSize;
+//     }
+// }
+//
+// let prince1 = new Prince('Dan',34,37);
+//
+//
+// // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+// //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+//
+// for (const cinderella of cinderellas) {
+//     if (cinderella.footSize === prince1.shoeSize){
+//         console.log(cinderella);
+//     }
+// }
+//
+//     // Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+//
+// let finder = cinderellas.find(value => value.footSize === prince1.shoeSize);
+// console.log(finder);
+
+
+
+// - Створити клас або функцію конструктор, за допомоги якої можна створювати об'єкти наступного вигляду.
+// Конструктор повинен приймати значення для кожної властивості, в т.ч і для властивостей внутрішніх об'єктів
+
+// class CEO {
+//     constructor(id,name,username,email,address,phone,website,company) {
+// this.id = id;
+// this.name = name;
+// this.username = username;
+// this.email = email;
+// this.address = {`street: ${this.street}, suite: this.suite`};
+// this.phone = phone;
+// this.website = website;
+// this.company = company;
+//
+//
+//     }
+// }
+//
+// let ceo1 = new CEO(1,'Leanne Graham','Bret','Sincere@april.biz',{street:'Kulas Light',suite:'Apt. 556',city:'Gwenborough',zipcode: '92998-3874',geo:{ lat: '-37.3159',lng: '81.1496'}}, '1-770-736-8031 x56442', 'hildegard.org',{name: 'Romaguera-Crona', catchPhrase: 'Multi-layered client-server neural-net', bs: 'harness real-time e-markets'})
+// console.log(ceo1);
+
+
+
+// class CEO {
+//     constructor(id,name,username,email,street,suite,city,zipcode,lat,lng,phone,website,comName,catchPhrase,bs) {
+//         this.id = id;
+//         this.name = name;
+//         this.username = username;
+//         this.email = email;
+//         this.address = {street,suite,zipcode};
+//         this.geo = {lat,lng};
+//         this.phone = phone;
+//         this.website = website;
+//         this.company = {comName,catchPhrase,bs};
+//     }
+// }
+//
+// let ceo1 = new CEO(1,'Leanne Graham','Bret','Sincere@april.biz','Kulas Light','Apt. 556',
+//     'Gwenborough', '92998-3874', '-37.3159', '81.1496','1-770-736-8031 x56442', 'hildegard.org','Romaguera-Crona',
+//         'Multi-layered client-server neural-net', 'harness real-time e-markets')
+// console.log(ceo1);
+
+
+//
+// {
+//     id: 1,
+//         name: 'Leanne Graham',
+//     username: 'Bret',
+//     email: 'Sincere@april.biz',
+//     address: {
+//     street: 'Kulas Light',
+//         suite: 'Apt. 556',
+//         city: 'Gwenborough',
+//         zipcode: '92998-3874',
+//         geo: {
+//         lat: '-37.3159',
+//             lng: '81.1496'
+//     }
+// },
+//     phone: '1-770-736-8031 x56442',website: 'hildegard.org',
+//     company: {
+//     name: 'Romaguera-Crona',
+//         catchPhrase: 'Multi-layered client-server neural-net',
+//         bs: 'harness real-time e-markets'
+// }
+// }
+//
+//
+// -  Створити функцію конструктор / клас  який описує об'єкт тегу
+
+// Поля :
+//     -назва тегу ()
+// - опис його дій
+// - масив з атрибутами (2-3 атрибути максимум)
+// Кожен атрибут описати як окремий який буде містити
+// -назву атрибуту
+// -опис дії атрибуту
+// інформацію брати з htmlbook.ru
+//
+// Таким чином описати теги
+// -a
+// -div
+// -h1
+// -span
+// -input
+// -form
+// -option
+// -select
+// Приклад результуючого об'єкту
+// {
+//     titleOfTag: 'area',
+//         action: `Каждый элемент <area> определяет активные области изображения, которые являются ссылками...`,
+//     attrs: [
+//     {titleOfAttr: 'accesskey', actionOfAttr: 'Переход к области с помощью комбинации клавиш'},
+//     {/*some props and values*/},
+//     {/*...*/},
+//     {/*...*/},
+// ]
+//
+// }
