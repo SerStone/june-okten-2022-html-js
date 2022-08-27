@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: #2e59b1;
+        }
+        .container{
+            width: 100%;
+            height: auto;
+            gap: 5px;
+        }
+        .contain1{
+
+        width: 100%;
+        height: 100%;
+        background-color: #2e59b1;
+        text-align: center;
+        color: #efefef;
+        }
+        .title{
+            width: 100%;
+            height: auto;
+            color: #efefef;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-items: center;
+            gap: 5px;
+            margin-top: 51px;
+            margin-bottom: 51px;
+        }
+        .contain{
+            width: 19%;
+            height: 75px;
+            font-size: 15px;
+            border: 2px solid white;
+            align-items: center;
+            text-align: center;
+            justify-items: center;
+            justify-content: center;
+            align-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .button{
+            width: 90%;
+            height: 50px;
+            border-radius: 35%;
+            margin-left: 5%;
+            border: 2px solid black;
+            margin-top: 51px;
+            font-size: 20px;
+        }
+        .buttons{
+            justify-items: center;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            border-radius: 50%;
+        }
+        .buttons > a{
+            text-decoration: none;
+            color: #2e59b1;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<script>
+
+    let url = new  URL(location.href);
+    console.log(url);
+    let id=JSON.parse(url.searchParams.get('id'));
+
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    .then(resp=>resp.json())
+    .then(users=>{
+
+        let container = document.createElement("div");
+        container.classList.add('container');
+
+        let contain1 = document.createElement("div");
+        contain1.classList.add('contain1');
+
+        function iterate(obj) {
+            for (let property in obj) {
+                if (obj.hasOwnProperty(property)) {
+                    if (typeof obj[property] == "object") {
+                        iterate(obj[property]);
+                    }
+                    else {
+                        let div = document.createElement("div");
+                        div.classList.add('add');
+                        div.innerText =  (property + " -- " + obj[property]);
+                        contain1.appendChild(div);
+                    }
+                }
+            }
+        }
+        iterate(users);
+        container.appendChild(contain1);
+
+let button = document.createElement("button");
+button.innerText = 'posts'
+button.classList.add('button');
+container.appendChild(button)
+
+
+        button.onclick = function (e){
+            e.preventDefault();
+            let title = document.createElement('div');
+            title.classList.add('title');
+
+            fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+                .then(response => response.json())
+                .then(posts => posts.forEach(post => {
+
+                    let contain = document.createElement("div");
+                    contain.classList.add('contain');
+                    contain.innerText = `title -- ${post.title}`;
+
+                    let a = document.createElement("a");
+                    a.href = `post-details.html?id=${post.id}`;
+                    a.innerText ='Go';
+
+                    let buttons = document.createElement("button");
+                    buttons.classList.add('buttons');
+                    buttons.appendChild(a);
+
+                        title.appendChild(contain);
+                        contain.appendChild(buttons);
+                        container.appendChild(title);
+                        button.disabled = true;
+                }))}
+        document.body.appendChild(container);
+    })
+</script>
+</body>
+</html>
